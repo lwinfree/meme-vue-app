@@ -73,12 +73,12 @@ export default {
       user: {}
     };
   },
-  created: function() {
-    axios.get("api/users/:id").then(response => {
-      this.user = response.data;
-      console.log(this.user);
-    });
-  },
+  // created: function() {
+  //   axios.get("api/users/:id").then(response => {
+  //     this.user = response.data;
+  //     console.log(this.user);
+  //   });
+  // },
   methods: {
     isLoggedIn: function() {
       return localStorage.getItem('jwt');

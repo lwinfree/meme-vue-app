@@ -1,6 +1,6 @@
 <template>
   <div class="pets-index">
-    <h1>Found {{ pets.length }} pets in 97214:</h1>
+    <h1>Found {{ pets.length }} pets in {{}}:</h1>
     <!-- TODO: want to make # of pets & zipcode dynamic & want to add a button here to change the zipcode & reload search results-->
     
     <div class = "container">

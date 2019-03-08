@@ -15,13 +15,18 @@
           Email: <input type="text" v-model="user.email">
         </div>
         <div>
-          Zipcode: <input type="text" v-model="user.zipcode">
+          Zipcode: <input type="number" v-model="user.zipcode">
         </div>
         <div>
-          Password: <input type="text" v-model="user.password">
+          Password: <input type="password" v-model="user.password">
         </div>
         <button type="submit">Submit Changes</button>
       </form>
+      <div>
+        <button v-on:click="destroyUser()">
+          Delete User
+        </button>
+      </div>
     </div>
 
   </div>
@@ -38,7 +43,7 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/users/" + localStorage.getItem("user_id")).then(response => {
+    axios.get("/api/users/me").then(response => {
       console.log(response.data);
       this.user = response.data;
     });
@@ -51,12 +56,19 @@ export default {
         zipcode: user.zipcode,
         password: user.password,
       };
-      axios.patch("/api/users/" + localStorage.getItem("user_id"), userParams).then(response => {
+      axios.patch("/api/users/me", userParams).then(response => {
         console.log("Updated!", response.data);
         this.$router.push("/users/me");
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
+    },
+    destroyUser: function() {
+      axios.delete("/api/users/me").then(response => {
+        console.log("User successfully destroyed!", response.data);
+        localStorage.removeItem("jwt");
+        this.$router.push("/");
+      })
     }
   }
 };
