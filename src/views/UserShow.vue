@@ -8,6 +8,7 @@
       <div v-for="favorite in user.favorites">
         <router-link v-bind:to="'/pets/' + favorite.petfinder_id">
           <h4>{{favorite.pet_name}}</h4>
+          <h4>{{favorite.petfinder_id}}</h4>
           <img :src="favorite.pet_image">
         </router-link>
       </div>
