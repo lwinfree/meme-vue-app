@@ -1,6 +1,6 @@
 <template>
   <div class="pets-index">
-    <h1>Found {{ pets.length }} pets in {{}}:</h1>
+    <h1>Found {{ pets.length }} pets in {{ user.zipcode }}:</h1>
     <!-- TODO: want to make # of pets & zipcode dynamic & want to add a button here to change the zipcode & reload search results-->
     
     <div class = "container">
@@ -12,7 +12,7 @@
               
                 <h2>{{ pet.pet_name }}</h2>
                 <h4>Age: {{ pet.pet_age }}</h4>
-                <h4>Breed: {{ pet.pet_breeds["$t"] }}</h4>
+                <h4>Breed: {{ pet.pet_breeds }}</h4>
                 More Info
             </div>
           </div>
@@ -30,11 +30,16 @@ export default {
   data: function() {
     return {
       pets: [],
+      user: {},
     };
   },
   created: function() {
     axios.get("/api/pets").then(response => {
       this.pets = response.data;
+      console.log(response.data);
+    });
+    axios.get("/api/users/me").then(response => {
+      this.user = response.data;
       console.log(response.data);
     });
   },
