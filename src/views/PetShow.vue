@@ -7,12 +7,9 @@
       </div>
       <div>
         <button v-if="pet.favorite" v-on:click="unfavoritePet()">
-          <i class="icon ion-md-heart">
-            <ion-icon name="heart"></ion-icon>
-          </i>
-
+          <i class="fa fa-heart"></i>
         </button>
-        <button v-else v-on:click="makeFavoritePet()">emptyHeart
+        <button v-else v-on:click="makeFavoritePet()"><i class="fa fa-heart-o"></i>
         </button>
       </div>
       <div>
@@ -24,7 +21,8 @@
         <!-- note: gotta fix breeds -->
         <p>{{ pet.pet_description }}</p>
         <a href="https://www.petfinder.com/">Adopt {{pet.pet_name}} on Petfinder</a> | 
-        <a href="/pets">Back to All Pets</a>
+        <a href="/pets">Back to All Pets</a> | 
+        <a href="/users/me">User Profile</a>
       </div>
     </div>
   </div>

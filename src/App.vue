@@ -10,16 +10,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Pet Memez</a>
+                <a class="navbar-brand" href="/"><img src="images/shiba-inu.png" alt="Meme App"></a>
             </div><!-- / navbar-header -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/"><span>HOME</span></a></li>
-                      <li v-if="isLoggedIn()"><a href="/pets"><span>PET SEARCH</span></a></li>
-                      <li v-if="isLoggedIn()"><a href="/users/me"><span>USER PROFILE</span></a></li>
-                      <li v-if="isLoggedIn()"><a href="/logout"><span>LOGOUT</span></a></li>
-                      <li v-else><a href="/login"><span>LOGIN</span></a></li>
-                      <li v-else><a href="/signup"><span>SIGNUP</span></a></li>
+                      <li v-if="isLoggedIn()"><router-link to="/pets"><span>PET SEARCH</span></router-link></li>
+                      <li v-if="isLoggedIn()"><router-link to="/users/me"><span>USER PROFILE</span></router-link></li>
+                      <li v-if="isLoggedIn()"><router-link to="/logout"><span>LOGOUT</span></router-link></li>
+                      <li v-if="!isLoggedIn()"><router-link to="/login"><span>LOGIN</span></router-link></li>
+                      <li v-if="!isLoggedIn()"><router-link to="/signup"><span>SIGNUP</span></router-link></li>
                 </ul>
             </div><!--/ nav-collapse -->
         </div><!-- / container -->
