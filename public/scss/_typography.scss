@@ -1,0 +1,227 @@
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+    color: $title-color;
+    font-family: $primary-font;
+    font-weight: $xbold;
+    letter-spacing: $letter-spacing-2x;
+    margin-top: 0;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: $white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+h5 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+h6 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+a {
+    color: $primary;
+    @include transition(.3s);
+    &:hover, &:active, &:focus {
+        color: $primary-hover;
+        text-decoration: none;      
+    }
+    letter-spacing: $letter-spacing;
+    font-weight: $bold;
+    outline: 0 !important;
+}
+
+p {
+    font-family: $primary-font;
+    font-weight: $regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-color;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 10px;
+}
+
+.dark p {
+    color: $light-grey;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul, ol {
+    padding-left: 16px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.list-featured {
+    list-style: none;
+    padding: 0;
+}
+
+.list-featured li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 7px;
+}
+
+.list-featured li:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 0;
+    left: 0;
+    top: 7px;
+    background-color: $primary;
+}
+
+ol li {
+    margin-bottom: 7px;
+}
+
+li {
+    color: $text-color;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: $letter-spacing;
+}
+
+blockquote {
+    border-left: 3px solid $primary;
+}
+
+.blockquote-reverse {
+    border-right: 3px solid $primary;
+}
+
+blockquote p {
+    font-size: 16px;
+    font-weight: $regular;
+}
+
+cite {
+    color: $primary;
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+strong {
+    font-weight: $bold;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.lead {
+    font-size: 18px;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+.text-xs {
+    font-size: 12px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-default {
+    color: $default;
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.text-success {
+    color: $success;
+}
+
+.text-info {
+    color: $info;
+}
+
+.text-warning {
+    color: $warning;
+}
+
+.text-danger {
+    color: $danger;
+}
+
+.bg-default {
+    color: $white;
+    background: $default;
+    padding: 3px 4px;
+}
+
+.bg-primary {
+    color: $white;
+    background: $primary;
+    padding: 3px 4px;
+}
+
+.bg-success {
+    color: $white;
+    background: $success;
+    padding: 3px 4px;
+}
+
+.bg-info{
+    color: $white;
+    background: $info;
+    padding: 3px 4px;
+}
+
+.bg-warning {
+    color: $white;
+    background: $warning;
+    padding: 3px 4px;
+}
+
+.bg-danger {
+    color: $white;
+    background: $danger;
+    padding: 3px 4px;
+}
+
+/* / End Typography */

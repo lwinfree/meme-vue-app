@@ -1,0 +1,874 @@
+/* Media Screens */
+
+@media only screen and (max-width: 1200px) {
+
+.project-hover-tools {
+    bottom: 45%;
+    right: 34%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 42%;
+    right: 34%;
+}
+
+.m-project .project-hover-tools {
+    bottom: 47%;
+}
+
+.project.m-project:hover .project-hover-tools {
+    bottom: 44%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    right: 34%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    right: 34%;
+}
+
+#portfolio .container-fluid .m-project .project-hover-tools {
+    bottom: 49%;
+}
+
+#portfolio .container-fluid  .project.m-project:hover .project-hover-tools {
+    bottom: 46%;
+}
+
+.pricing-currency {
+    font-size: 14px;
+    vertical-align: 20px;
+}
+
+.pricing-price {
+    font-size: 40px;
+}
+
+.pricing-table .pricing-table-content ul li {
+    font-size: 12px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+
+.split-menu .pull-left {
+    float: none !important;
+}
+
+.split-menu .navbar-brand {
+    display: block;
+}
+
+.split-menu .pull-right {
+    float: none !important;
+}
+
+.split-menu .navbar-nav {
+    float: none;
+}
+
+.split-menu .navbar-nav>li {
+    float: none;
+    display: inline-block;
+}
+
+.nav > li > a {
+    padding: 12.5px 10px;
+}
+
+.open .dropdown-menu>li>a {
+    font-size: 13px;
+}
+
+.project-hover-tools {
+    bottom: 45%;
+    right: 36%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 42%;
+    right: 36%;
+}
+
+.m-project .project-hover-tools {
+    bottom: 48%;
+}
+
+.project.m-project:hover .project-hover-tools {
+    bottom: 45%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    right: 36%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    right: 36%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    bottom: 47%;
+    right: 39%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    bottom: 44%;
+    right: 39%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    bottom: 59%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    bottom: 56%;
+}
+
+.log-line .checkbox label {
+    padding-left: 8px;
+}
+
+.widget-area .col-md-4, .widget-area .col-md-3  {
+    padding: 15px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+
+.top-menu .space-left {
+    padding-left: 7px !important;
+}
+
+.top-menu .space-right {
+    padding-right: 5px !important;
+}
+
+.navbar-nav {
+    padding-left: 0;
+}
+
+.navbar-nav > li > a {
+    line-height: 50px;
+    padding: 0 !important;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    height: auto;
+    padding: 20px 5px;
+}
+
+.stacked-menu .navbar-brand {
+    float: left;
+    padding-bottom: 20px;
+    margin-top: -80px;
+}
+
+.open .dropdown-menu>li>a {
+    padding: 5px 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.dropdown-toggle span {
+    margin-left: 15px;
+}
+
+.navbar-nav .open .dropdown-menu {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.navbar-nav .open .dropdown-menu>li>a {
+    padding: 10px 0;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
+    color: $primary;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: $title-color;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: $primary;
+    background-color: transparent;
+}
+
+.navbar .btn {
+    margin: 7px 0 20px 0;
+}
+
+.banner-content {
+    padding: 100px 0;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    bottom: 45%;
+    right: 35%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    bottom: 42%;
+    right: 35%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    bottom: 60%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    bottom: 57%;
+}
+
+.project-sidebar.right {
+    border-top: 2px solid $light-grey;
+    margin-top: 30px;
+    padding: 20px 15px;
+}
+
+.section-w-image {
+    padding: 0 15px;
+}
+
+.about-img {
+    position: relative;
+    height: 450px;
+}
+
+.fact-title {
+    margin-bottom: 30px;
+}
+
+.pricing-table {
+    max-width: 80%;
+    margin: 30px auto;
+}
+
+.stacked > .col-md-4, .stacked > .col-md-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.stacked .col-md-3 .featured.pricing-table {
+    margin-top: 0;
+}
+
+.stacked .featured.pricing-table {
+    margin-top: 0;
+}
+
+#team .col-sm-4 {
+    padding: 0;
+}
+
+.team {
+    width: 80%;
+    margin: 0 auto 30px auto;
+}
+
+.contact-info {
+    padding: 5px 15px;
+}
+
+.contact-area .map {
+    padding-right: 0;
+    margin-bottom: 30px;
+}
+
+.contact-form-area {
+    padding-right: 15px;
+}
+
+.contact-text {
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+
+#map {
+    height: 300px;
+}
+}
+
+@media only screen and (max-width: 660px) {
+
+.project-hover-tools {
+    bottom: 44%;
+    right: 34%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 41%;
+    right: 34%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    right: 34%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    right: 34%;
+}
+
+#portfolio.info-box .m-project .project-hover-tools {
+    bottom: 58.5%;
+}
+
+#portfolio.info-box .project.m-project:hover .project-hover-tools {
+    bottom: 55.5%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    bottom: 62%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    bottom: 59%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+.col-xs-6 {
+    width: 100%;
+}
+
+.project-hover-tools {
+    bottom: 48%;
+    right: 41%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 45%;
+    right: 41%;
+}
+
+.m-project .project-hover-tools {
+    bottom: 50%;
+}
+
+.project.m-project:hover .project-hover-tools {
+    bottom: 47%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    bottom: 58%;
+    right: 41%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    bottom: 55%;
+    right: 41%;
+}
+
+#portfolio.info-box .m-project .project-hover-tools {
+    bottom: 56%;
+}
+
+#portfolio.info-box .project.m-project:hover .project-hover-tools {
+    bottom: 53%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    bottom: 48%;
+    right: 42%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    bottom: 45%;
+    right: 42%;
+}
+
+#portfolio .container-fluid .m-project .project-hover-tools {
+    bottom: 50%;
+    right: 41%;
+}
+
+#portfolio .container-fluid  .project.m-project:hover .project-hover-tools {
+    bottom: 47%;
+    right: 41%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    bottom: 58%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    bottom: 55%;
+}
+
+.about-img {
+    height: 300px;
+}
+
+#contactForm .form-control {
+    margin-bottom: 20px;
+    padding: 10px;
+    min-height: 40px;
+}
+
+#contactForm textarea {
+    padding: 15px 10px !important;
+}
+
+#contact-form-1 .btn-form-submit {
+    padding: 9px;
+}
+
+.help-block {
+    margin-top: 20px;
+}
+
+.help-block.with-errors li {
+    margin-top: -20px;
+}
+
+.footer-info {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.footer-info .pull-right {
+    float: none !important;
+    display: block;
+}
+}
+
+@media only screen and (max-width: 550px) {
+
+.top-menu {
+    text-align: center;
+}
+
+.top-menu .space-left {
+    display: block;
+    margin-bottom: 30px;
+    padding-left: 0 !important;
+}
+
+.top-menu .right {
+    float: none;
+    display: block;
+}
+
+.top-menu .pull-right {
+    float: none !important;
+    padding: 0 !important;
+}
+
+.top-menu .margin-fix {
+    margin-bottom: 15px !important;
+}
+
+.project-hover-tools {
+    bottom: 48%;
+    right: 40%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 45%;
+    right: 40%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    bottom: 59%;
+    right: 40%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    bottom: 56%;
+    right: 40%;
+}
+
+#portfolio.info-box .m-project .project-hover-tools {
+    bottom: 57%;
+}
+
+#portfolio.info-box .project.m-project:hover .project-hover-tools {
+    bottom: 54%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    right: 40%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    right: 40%;
+}
+
+#portfolio .container-fluid .m-project .project-hover-tools {
+    right: 40%;
+}
+
+#portfolio .container-fluid  .project.m-project:hover .project-hover-tools {
+    right: 40%;
+}
+}
+
+@media only screen and (max-width: 480px) {
+
+.banner-content {
+    padding: 80px 0;
+}
+
+.banner-border {
+    width: 90%;
+    padding: 10px;
+}
+
+.banner-border .banner-info {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.banner-info {
+    width: 90%;
+    padding: 50px;
+}
+
+.banner-info h1 {
+    font-size: 20px;
+}
+
+.project-hover-tools {
+    bottom: 47%;
+    right: 38%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 44%;
+    right: 38%;
+}
+
+.m-project .project-hover-tools {
+    bottom: 49%;
+}
+
+.project.m-project:hover .project-hover-tools {
+    bottom: 46%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    bottom: 60%;
+    right: 38%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    bottom: 57%;
+    right: 38%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    right: 39%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    right: 39%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    bottom: 60%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    bottom: 57%;
+}
+
+#map {
+    height: 220px;
+}
+
+.spinner {
+    left: 45%;
+}
+}
+
+@media only screen and (max-width: 400px) {
+
+.m-project .project-hover-tools {
+    bottom: 48%;
+}
+
+.project.m-project:hover .project-hover-tools {
+    bottom: 45%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    bottom: 60%;
+    right: 36%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    bottom: 57%;
+    right: 36%;
+}
+
+#portfolio.info-box .m-project .project-hover-tools {
+    bottom: 58%;
+}
+
+#portfolio.info-box .project.m-project:hover .project-hover-tools {
+    bottom: 55%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    right: 38%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    right: 38%;
+}
+
+.pricing-table {
+    max-width: 90%;
+}
+
+.btn-direction.pull-right {
+    float: none !important;
+}
+
+.team {
+    width: 90%;
+}
+}
+
+@media only screen and (max-width: 360px) {
+
+.project-hover-tools {
+    bottom: 44%;
+    right: 32%;
+}
+
+.project:hover .project-hover-tools {
+    bottom: 41%;
+    right: 32%;
+}
+
+.m-project .project-hover-tools {
+    bottom: 47%;
+}
+
+.project.m-project:hover .project-hover-tools {
+    bottom: 44%;
+}
+
+#portfolio.info-box .project-hover-tools {
+    bottom: 61%;
+    right: 32%;
+}
+
+#portfolio.info-box .project:hover .project-hover-tools {
+    bottom: 58%;
+    right: 32%;
+}
+
+#portfolio.info-box .m-project .project-hover-tools {
+    bottom: 59%;
+}
+
+#portfolio.info-box .project.m-project:hover .project-hover-tools {
+    bottom: 56%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    bottom: 44%;
+    right: 39%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    bottom: 41%;
+    right: 39%;
+}
+
+#portfolio .container-fluid .project-hover-tools {
+    right: 36%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    right: 36%;
+}
+
+#portfolio .container-fluid .m-project .project-hover-tools {
+    bottom: 48%;
+    right: 36%;
+}
+
+#portfolio .container-fluid  .project.m-project:hover .project-hover-tools {
+    bottom: 45%;
+    right: 36%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    right: 32%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    right: 32%;
+}
+}
+
+
+/* Min Widths */
+
+@media only screen and (min-width: 1200px) {
+
+#portfolio .container-fluid .project-hover-tools {
+    bottom: 47%;
+    right: 39%;
+}
+
+#portfolio .container-fluid  .project:hover .project-hover-tools {
+    bottom: 44%;
+    right: 39%;
+}
+
+#portfolio .container-fluid .m-project .project-hover-tools {
+    bottom: 50%;
+    right: 40%;
+}
+
+#portfolio .container-fluid  .project.m-project:hover .project-hover-tools {
+    bottom: 47%;
+    right: 40%;
+}
+
+#portfolio.info-box .container-fluid .project-hover-tools {
+    bottom: 59%;
+}
+
+#portfolio.info-box .container-fluid .project:hover .project-hover-tools {
+    bottom: 56%;
+}
+
+#portfolio.two-col .project .project-hover-tools {
+    right: 41% !important;
+    bottom: 48%;
+}
+
+#portfolio.two-col .project:hover .project-hover-tools {
+    right: 41% !important;
+    bottom: 45%;
+}
+
+#portfolio.info-box.two-col .project .project-hover-tools {
+    bottom: 58%;
+}
+
+#portfolio.info-box.two-col .project:hover .project-hover-tools {
+    bottom: 55%;
+}
+
+#portfolio.two-col .project.m-project .project-hover-tools {
+    bottom: 50%;
+}
+
+#portfolio.two-col .project.m-project:hover .project-hover-tools {
+    bottom: 47%;
+}
+
+#portfolio.info-box.two-col .project.m-project .project-hover-tools {
+    bottom: 56%;
+}
+
+#portfolio.info-box.two-col .project.m-project:hover .project-hover-tools {
+    bottom: 53%;
+}
+
+#portfolio.four-col .project .project-hover-tools {
+    right: 31% !important;
+    bottom: 43%;
+}
+
+#portfolio.four-col .project:hover .project-hover-tools {
+    right: 31% !important;
+    bottom: 40%;
+}
+
+#portfolio.four-col .project.m-project .project-hover-tools {
+    bottom: 47% !important;
+}
+
+#portfolio.four-col .project.m-project:hover .project-hover-tools {
+    bottom: 44% !important;
+}
+}
+
+@media only screen and (min-width: 992px) {
+
+#portfolio.two-col .project .project-hover-tools {
+    right: 39%;
+}
+
+#portfolio.two-col .project:hover .project-hover-tools {
+    right: 39%;
+}
+
+#portfolio.four-col .project .project-hover-tools {
+    right: 28%;
+    bottom: 43%;
+}
+
+#portfolio.four-col .project:hover .project-hover-tools {
+    right: 28%;
+    bottom: 40%;
+}
+
+#portfolio.info-box.four-col .project .project-hover-tools {
+    bottom: 61%;
+}
+
+#portfolio.info-box.four-col .project:hover .project-hover-tools {
+    bottom: 58%;
+}
+
+#portfolio.four-col .project.m-project .project-hover-tools {
+    bottom: 46%;
+}
+
+#portfolio.four-col .project.m-project:hover .project-hover-tools {
+    bottom: 43%;
+}
+
+#portfolio.info-box.four-col .project.m-project .project-hover-tools {
+    bottom: 59%;
+}
+
+#portfolio.info-box.four-col .project.m-project:hover .project-hover-tools {
+    bottom: 56%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+}
+
+/* End Min Widths */
+
+/* / End Media Screens */
