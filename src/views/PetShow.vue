@@ -3,7 +3,7 @@
     <div class = "container">
       <div>
         <h1>{{ pet.pet_name }}</h1>
-        <img :src="pet.pet_photo" :alt="pet.pet_name">
+        <img :src="pet.meme_url" :alt="pet.pet_name">
       </div>
       <div>
         <button v-if="pet.favorite" v-on:click="unfavoritePet()">
