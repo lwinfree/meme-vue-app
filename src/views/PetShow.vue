@@ -1,5 +1,78 @@
 <template>
-  <div id="page-content" class="pet-show">
+  <div class="pet-show">
+
+    <!-- content -->
+
+    <div id="page-content" class="container">
+        <!-- project content + sidebar -->
+        <section id="project">
+            <div class="row">
+                <!-- project content area -->
+                <div class="col-sm-7">
+                    <div class="project-content-area">
+                        <img :src="pet.meme_url" alt="" class="space-bottom-30">
+                    </div><!-- / project-content-area -->    
+                </div>
+                <!-- / project-content-area -->
+
+                <!-- project sidebar area -->
+                <div class="col-sm-5 project-sidebar right">
+                    <div class="section-description light">
+                        <h4>{{pet.pet_name}}</h4>
+                        <div v-if="Array.isArray(pet.pet_breeds)">
+                          <p v-for="breed in pet.pet_breeds">
+                            {{breed.$t}}
+                          </p>
+                        </div>
+                        <div v-else> 
+                          {{pet.pet_breeds.$t }} 
+                        </div>
+                        <h4 class="space-top-30">PROJECT INFO</h4>
+                        <div class="project-info">
+                            <div class="info">
+                                <p><i class="lnr lnr-user"></i><span>Client:<a href="#x"> King Studio</a></span></p>
+                            </div>
+                            <div class="info">
+                                <p><i class="lnr lnr-star"></i><span>Skills:<a href="#x"> Graphic Design</a>, <a href="#x"> Branding</a></span></p>
+                            </div>
+                            <div class="info">
+                                <p><i class="lnr lnr-calendar-full"></i><span>Date: Nov. 15, 2016</span></p>
+                            </div>
+                            <div class="info">
+                                <p><i class="lnr lnr-map"></i><span>Location: Miami</span></p>
+                            </div>
+                        </div><!-- / project-info -->
+
+                        <div class="info-buttons">
+                            <a href="" class="btn btn-primary-filled"><i class="lnr lnr-eye"></i><span> View Demo</span></a>
+                            <a href="contact.html" class="btn btn-default-filled"><i class="lnr lnr-phone-handset"></i><span> Contact</span></a>
+                        </div><!-- / info-buttons -->
+
+                    </div><!-- section-description -->
+
+                </div><!-- / col-sm-4 col-md-3 -->
+                <!-- / project sidebar area -->
+            </div><!-- / row -->
+
+            <div class="row">
+              <h4>PET DESCRIPTION</h4>
+              <p>{{pet.pet_description}}</p>
+            </div>
+        </section>
+        <!-- / project content + sidebar --> 
+
+    </div><!-- / container -->
+
+    <!-- / content -->
+
+
+
+
+
+
+
+
+
     <div class = "container">
 
       <section id="project">

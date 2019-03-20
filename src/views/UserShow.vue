@@ -1,23 +1,36 @@
 <template>
   <div class="users-show">
+
+  <div id="header-banner">
+        <div class="banner-content single-page text-center">
+            <div class="banner-info">
+                <h1 class="space-bottom-30">{{ user.name }}</h1>
+                <router-link v-bind:to="'/users/me/edit'">Edit my profile</router-link> | 
+                <router-link v-bind:to="'/pets'">Search for pets</router-link>
+            </div>
+        </div>
+    </div>
+
     <div  id="page-content" class = "container">
 
       <section id="project">
-
-        <div class="section-description light">
-          <h1>{{ user.name }}</h1>
-          <h4>
-            <i class="fa fa-envelope"></i> {{ user.email }}
-          </h4>
-          <h4>
-            <i class="fa fa-map-marker"></i> {{ user.zipcode }}
-          </h4>
-          <h2 class="space-top-30">Favorites:</h2>
+        <div class="row">
+          <div class="col-sm-6 contact-info text-center space-bottom">
+            <h4>
+              <i class="fa fa-envelope"></i> {{ user.email }}
+            </h4>
+          </div>
+          <div class="col-sm-6 contact-info text-center space-bottom">
+            <h4>
+              <i class="fa fa-map-marker"></i> {{ user.zipcode }}
+            </h4>
+          </div>
         </div>
       </section>
 
       <section id="portfolio" class="info-box two-col">
         <div class = "container">
+        <h2 class="text-center">Favorites</h2>
           <ul class="row portfolio list-unstyled lightbox" id="grid" >
             <!-- <div v-for="pet in pets"> -->
               <!-- <router-link v-bind:to="'/pets/' + pet.pet_id"> -->
