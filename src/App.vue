@@ -14,12 +14,12 @@
             </div><!-- / navbar-header -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/"><span>HOME</span></a></li>
-                      <li v-if="isLoggedIn()"><router-link to="/pets"><span>PET SEARCH</span></router-link></li>
-                      <li v-if="isLoggedIn()"><router-link to="/users/me"><span>USER PROFILE</span></router-link></li>
-                      <li v-if="isLoggedIn()"><router-link to="/logout"><span>LOGOUT</span></router-link></li>
-                      <li v-if="!isLoggedIn()"><router-link to="/login"><span>LOGIN</span></router-link></li>
-                      <li v-if="!isLoggedIn()"><router-link to="/signup"><span>SIGNUP</span></router-link></li>
+                    <li><router-link to="/"><span>HOME</span></router-link></li>
+                    <li v-if="isLoggedIn()"><router-link to="/pets"><span>PET SEARCH</span></router-link></li>
+                    <li v-if="isLoggedIn()"><router-link to="/users/me"><span>USER PROFILE</span></router-link></li>
+                    <li v-if="isLoggedIn()"><router-link to="/logout"><span>LOGOUT</span></router-link></li>
+                    <li v-if="!isLoggedIn()"><router-link to="/login"><span>LOGIN</span></router-link></li>
+                    <li v-if="!isLoggedIn()"><router-link to="/signup"><span>SIGNUP</span></router-link></li>
                 </ul>
             </div><!--/ nav-collapse -->
         </div><!-- / container -->

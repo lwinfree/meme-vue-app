@@ -1,8 +1,18 @@
 <template>
   <div class="login">
+
+    <div id="header-banner">
+        <div class="banner-content single-page text-center">
+          <div class="banner-border">
+            <div class="banner-info">
+                <h1>LOG IN</h1>
+            </div><!-- / banner-info -->
+          </div>
+        </div><!-- / banner-content -->
+    </div>
+
     <div class="container">
       <form v-on:submit.prevent="submit()">
-        <h1>Login</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>

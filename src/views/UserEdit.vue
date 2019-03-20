@@ -1,5 +1,15 @@
 <template>
   <div class="users-edit">
+
+    <div id="header-banner">
+        <div class="banner-content single-page text-center">
+          <div class="banner-border">
+            <div class="banner-info">
+                <h1>EDIT PROFILE</h1>
+            </div><!-- / banner-info -->
+          </div>
+        </div><!-- / banner-content -->
+    </div>
     
     <div class="container">
       <ul>
