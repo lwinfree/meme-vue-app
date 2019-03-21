@@ -6,40 +6,43 @@
           <div class="banner-border">
             <div class="banner-info">
                 <h1>SIGN UP</h1>
-            </div><!-- / banner-info -->
+            </div>
           </div>
-        </div><!-- / banner-content -->
+        </div>
     </div>
 
-    <div class="container">
-        <!-- <div class="contact-form"> -->
-          <form v-on:submit.prevent="submit()">
-            <ul>
-              <li class="text-danger" v-for="error in errors">{{ error }}</li>
-            </ul>
-            <div class="form-group">
-              <label>Name:</label> 
-              <input type="text" class="form-control" v-model="name">
-            </div>
-            <div class="form-group">
-              <label>Email:</label>
-              <input type="email" class="form-control" v-model="email">
-            </div>
-            <div class="form-group">
-              <label>Zipcode:</label>
-              <input type="text" class="form-control" v-model="zipcode">
-            </div>
-            <div class="form-group">
-              <label>Password:</label>
-              <input type="password" class="form-control" v-model="password">
-            </div>
-            <div class="form-group">
-              <label>Password confirmation:</label>
-              <input type="password" class="form-control" v-model="passwordConfirmation">
-            </div>
-            <input type="submit" class="btn btn-primary" value="Submit">
-          </form>
-        <!-- </div> -->
+    <div id="page-content" class="container">
+
+      <div class="contact-area">
+        <div class="contact-form-area">
+        
+          <ul>
+            <li class="text-danger" v-for="error in errors">{{ error }}</li>
+          </ul>
+
+          <div id="contact-form">
+            <form v-on:submit.prevent="submit()" id="contactForm" data-toggle="validator">
+              
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="NAME" v-model="name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" v-model="email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="zipcode" placeholder="ZIPCODE" v-model="zipcode">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="PASSWORD" v-model="password">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password_confirmation" placeholder="PASSWORD CONFIRMATION" v-model="passwordConfirmation">
+              </div>
+              <button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">SIGNUP</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

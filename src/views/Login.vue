@@ -1,9 +1,6 @@
 <template>
   <div class="login">
 
-
-    <!-- content -->
-
     <div id="header-banner">
         <div class="banner-content single-page text-center">
           <div class="banner-border">
