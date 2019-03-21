@@ -12,7 +12,6 @@
     </div>
 
     <div  id="page-content" class = "container">
-
       <section id="project">
         <div class="row">
           <div class="col-sm-6 contact-info text-center space-bottom">
@@ -28,14 +27,16 @@
         </div>
       </section>
 
-      <section id="portfolio" class="info-box two-col">
-        <div class="container" v-if="user.favorites.length > 0">
+      <section id="portfolio" class="w-shadow">
         <h2 class="text-center">Favorites</h2>
+          <div class="pricing-table-button text-center">
+            <a href="/pets" class="btn btn-lg btn-primary-filled">Search for pets to add favorites</a>
+          </div>
           <ul class="row portfolio list-unstyled lightbox" id="grid" >
             <!-- <div v-for="pet in pets"> -->
               <!-- <router-link v-bind:to="'/pets/' + pet.pet_id"> -->
                 
-                <li class="col-xs-6 project m-project" v-for="favorite in user.favorites">
+                <li class="col-xs-6 project" v-for="favorite in user.favorites">
                     <div class="img-bg-color primary">
                         <!-- / project-link -->
                         <img :src="favorite.pet_info.pet_photo" :alt="favorite.pet_info.pet_name">
@@ -59,21 +60,11 @@
               <!-- </router-link> -->
             <!-- </div> -->
           </ul>
-        </div>
-        <div class="pricing-table-button text-center" >
-          <h2>Favorites</h2>
-            <a href="/pets" class="btn btn-lg btn-primary-filled">Search for pets to add favorites</a>
-        </div>
       </section>
-      
     </div>
-
-
-
-    
-
   </div>
 </template>
+
 
 <script>
 import axios from "axios";

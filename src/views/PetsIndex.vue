@@ -7,44 +7,39 @@
     <h1 class=text-center>Found {{ pets.length }} pets in {{ user.zipcode }}:</h1>
 
     <!-- portfolio section -->
-    <section id="portfolio" class="info-box two-col">
-        <div class="container">
-            <ul class="row portfolio list-unstyled lightbox" id="grid">
-                <!-- project -->
-                <li v-for="pet in pets" class="col-xs-6 project">
-                    <div class="img-bg-color primary">
-                        <img :src="pet.pet_photo" alt="">
-                        <!-- project-hover-tools -->
-                        <div class="project-hover-tools">
-                          <router-link v-bind:to="'/pets/' + pet.pet_id" class="view-btn">
-                             <i class="lnr lnr-eye"></i>
-                           </router-link>
-                        </div><!-- / project-hover-tools -->
 
-                        <!-- project-details -->
-                        <div class="project-details"> 
-                          <h4>{{ pet.pet_name }}</h4>
-                          <p>{{ pet.pet_age }}</p>
-                            <p v-if="Array.isArray(pet.pet_breeds)">
-                              {{pet.pet_breeds[0]["$t"]}}
-                              <!-- <span v-for="breed in pet.pet_breeds">
-                                {{breed.$t}}
-                              </span> -->
-                            </p>
-                            <p v-else> 
-                              {{pet.pet_breeds.$t }} 
-                            </p>
-                        </div><!-- / project-details -->
-                    </div><!-- / img-bg-color -->
-                </li>
-                <!-- / project -->
 
-                <!-- sizer -->
-                <li class="col-xs-6 shuffle_sizer"></li>      
-            </ul> <!-- / projects -->
-        </div><!-- / container -->
+    <section id="portfolio" class="w-shadow">
+      <ul class="row portfolio list-unstyled lightbox" id="grid" >
+        <li class="col-xs-6 project" v-for="pet in pets">
+            <div class="img-bg-color primary">
+                <!-- / project-link -->
+                <img :src="pet.pet_photo" :alt="pet.pet_name">
+                <!-- / project-image -->
 
+                <!-- project-hover-tools -->
+                <div class="project-hover-tools">
+                    <router-link v-bind:to="'/pets/' + pet.pet_id" class="view-btn">
+                        <i class="lnr lnr-eye"></i>
+                    </router-link>
+                </div><!-- / project-hover-tools -->
+
+                <!-- project-details -->
+                <div class="project-details">
+                    <h4>{{ pet.pet_name }}</h4>
+                    <h5>{{ pet.pet_age }}</h5>
+                      <h5 v-if="Array.isArray(pet.pet_breeds)">
+                        {{pet.pet_breeds[0]["$t"]}}
+                      </h5>
+                      <h5 v-else> 
+                        {{pet.pet_breeds.$t }} 
+                      </h5>
+                </div><!-- / project-details -->
+            </div><!-- / img-bg-color -->
+        </li>
+      </ul>
     </section>
+
     <!-- / portfolio section -->
 
     <!-- / content -->
@@ -58,9 +53,16 @@
     height: 400px;
   }
   div img {
-      height: 100%;
-      width: auto;
+    height: 100%;
+    width: auto;
   }
+  div.project-details h4, h5 {
+    color: #e0e1e2;
+  }
+
+  /*div.project-hover-tools {
+    margin: 0, 50px, 0, 0;
+  }*/
 </style>
 
 <script>

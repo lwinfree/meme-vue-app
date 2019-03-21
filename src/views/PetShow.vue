@@ -31,15 +31,17 @@
                           </button>
                         </div>
 
-                        <div v-if="Array.isArray(pet.pet_breeds)">
+                        <div class="space-top-30" v-if="Array.isArray(pet.pet_breeds)">
                           <h5 v-for="breed in pet.pet_breeds">
                             {{breed.$t}}
                           </h5>
                         </div>
-                        <div v-else> 
+                        <div class="space-top-30" v-else> 
                           <h5>{{pet.pet_breeds.$t }}</h5>
                         </div>
-                        <h5>{{ pet.pet_age }}</h5>
+                        <div class="space-top-30">
+                          <h5>{{ pet.pet_age }}</h5>
+                        </div>
 
                     </div><!-- section-description -->
 
@@ -47,7 +49,7 @@
                 <!-- / project sidebar area -->
             </div><!-- / row -->
 
-            <div class="row">
+            <div class="row description">
               <h4>Description</h4>
               <p>{{pet.pet_description}}</p>
             </div>
@@ -67,8 +69,11 @@
 </template>
 
 <style>
-  div.section-description {
-    margin-top:50%;
+  div.space-top-30 h5 {
+    color: #000;
+  }
+  div.description{
+    padding: 50px;
   }
 </style>
 
