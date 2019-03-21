@@ -55,7 +55,7 @@
             </div>
         </section>
         <div class="text-center space-top-30">
-          <a href="https://www.petfinder.com/">Adopt {{pet.pet_name}} on Petfinder</a> | 
+          <a href="https://www.petfinder.com/" target="_blank">Adopt {{pet.pet_name}} on Petfinder</a> | 
           <a href="/pets">Back to All Pets</a> | 
           <a href="/users/me">User Profile</a>
         </div>

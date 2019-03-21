@@ -34,9 +34,9 @@
     <!-- footer -->
     <footer>
         <div class="container">
-            <p class="footer-info">Adopt-a-Meme is Powered by <a href="https://www.petfinder.com/">Petfinder.com</a> and created by Lilly Winfree
+            <p class="footer-info">Adopt-a-Meme is Powered by <a href="https://www.petfinder.com/" target="_blank">Petfinder.com</a> and created by Lilly Winfree
                 <span class="social pull-right">
-                    <a href="https://twitter.com/lilscientista"><i class="fa fa-twitter"></i></a>
+                    <a href="https://twitter.com/lilscientista"  target="_blank"><i class="fa fa-twitter"></i></a>
                 </span>
             </p>
         </div><!-- / container -->

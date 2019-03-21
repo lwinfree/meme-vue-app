@@ -11,36 +11,52 @@
         </div><!-- / banner-content -->
     </div>
     
-    <div class="container">
-      <ul>
-        <li v-for="error in errors">{{ error }}
-        </li>
-      </ul>
 
-      <form v-on:submit.prevent="submit(user)">
-        <div>
-          Name: <input type="text" v-model="user.name">
-        </div>
-        <div>
-          Email: <input type="text" v-model="user.email">
-        </div>
-        <div>
-          Zipcode: <input type="number" v-model="user.zipcode">
-        </div>
-        <div>
-          Password: <input type="password" v-model="user.password">
-        </div>
-        <button type="submit">Submit Changes</button>
-      </form>
-      <div>
-        <button v-on:click="destroyUser()">
-          Delete User
-        </button>
+    <div id="page-content" class="container">
+
+      <div class="contact-area">
+          <div class="contact-form-area">
+
+            <ul>
+              <li class="text-danger" v-for="error in errors">{{ error }}</li>
+            </ul>
+              <div id="contact-form">
+                <form v-on:submit.prevent="submit(user)" id="contactForm">
+                  <div class="form-group">
+                    <h5>NAME: </h5>
+                    <input class="form-control" type="text" v-model="user.name">
+                  </div>
+                  <div class="form-group">
+                    <h5>EMAIL: </h5>
+                    <input class="form-control" type="text" v-model="user.email">
+                  </div>
+                  <div class="form-group">
+                    <h5>ZIPCODE: </h5>
+                    <input class="form-control" type="number" v-model="user.zipcode">
+                  </div>
+                  <div class="form-group">
+                    <h5>PASSWORD: </h5>
+                    <input class="form-control" type="password" v-model="user.password">
+                  </div>
+                  <button type="submit" class="btn btn-md btn-primary-filled btn-form-submit">EDIT</button>
+                </form>
+                  <div class="space-top-30">
+                    <button class="btn btn-md btn-default-filled btn-form-submit" v-on:click="destroyUser()">
+                      DELETE USER
+                    </button>
+                  </div>
+              </div>
+          </div>
       </div>
     </div>
-
   </div>
 </template>
+
+<style>
+  div.form-group h5 {
+    color: #c39d6d;
+  }
+</style>
 
 <script>
 var axios = require("axios");
