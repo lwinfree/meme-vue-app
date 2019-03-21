@@ -43,6 +43,37 @@
                           <h5>{{ pet.pet_age }}</h5>
                         </div>
 
+                      <div class="sharing">
+                        <h5>
+                          Share {{pet.pet_name}} with your friends!
+                        </h5>
+                        <social-sharing url="'/pets/' + favorite.petfinder_id"
+                         title="Check out this adoptable pet"
+                         description="This pet is adorable and adoptable!"
+                         quote="Don't you want to adopt this pet?"
+                         hashtags="adopt,pet,cute"
+                         inline-template>
+                          <div>
+                            <button class="btn btn-sm btn-primary">
+                              <network network="email">
+                                <i class="fa fa-envelope"></i> Email   
+                              </network>
+                            </button>
+                            <button class="btn btn-sm btn-primary">
+                              <network network="facebook">
+                                <i class="fa fa-facebook"></i> Facebook   
+                              </network>
+                            </button>
+                            <button class="btn btn-sm btn-primary">
+                              <network network="twitter">
+                                <i class="fa fa-twitter"></i> Twitter
+                              </network>
+                            </button>
+                          </div>
+                        </social-sharing>
+                      </div>
+
+
                     </div><!-- section-description -->
 
                 </div><!-- / col-sm-4 col-md-3 -->
@@ -60,6 +91,7 @@
           <a href="/users/me">User Profile</a>
         </div>
         <!-- / project content + sidebar --> 
+        
 
       </div><!-- / container -->
 
@@ -75,12 +107,24 @@
   div.description{
     padding: 50px;
   }
+  div.sharing {
+    text-align: center;
+    color: rgb(198, 154, 111);
+    margin-top: 25px;
+  }
+  div.sharing h5{
+    color: rgb(198, 154, 111);
+  }
 </style>
 
 <script>
 import axios from "axios";
+import SocialSharing from "vue-social-sharing";
 
 export default {
+  components: {
+    SocialSharing
+  },
   data: function() {
     return {
       pet: {},

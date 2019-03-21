@@ -36,7 +36,7 @@
             <!-- <div v-for="pet in pets"> -->
               <!-- <router-link v-bind:to="'/pets/' + pet.pet_id"> -->
                 
-                <li class="col-xs-6 project" v-for="favorite in user.favorites">
+                <li class="col-xs-6 project" v-for="favorite in orderBy(user.favorites, 'pet_info.pet_name')">
                     <div class="img-bg-color primary">
                         <!-- / project-link -->
                         <img :src="favorite.pet_info.pet_photo" :alt="favorite.pet_info.pet_name">
@@ -68,8 +68,10 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       user: {},

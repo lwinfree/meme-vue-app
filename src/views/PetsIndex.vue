@@ -10,7 +10,7 @@
 
 
     <section id="portfolio" class="w-shadow">
-      <ul class="row portfolio list-unstyled lightbox" id="grid" >
+      <ul class="row portfolio list-unstyled lightbox" id="grid">
         <li class="col-xs-6 project" v-for="pet in pets">
             <div class="img-bg-color primary">
                 <!-- / project-link -->
@@ -67,8 +67,10 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       pets: [],
