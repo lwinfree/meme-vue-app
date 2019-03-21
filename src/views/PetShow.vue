@@ -3,7 +3,8 @@
 
     <!-- content -->
 
-    <div id="page-content" class="container">
+    <div id="page-content">
+      <div class="container">
         <!-- project content + sidebar -->
         <section id="project">
             <div class="row">
@@ -17,36 +18,28 @@
 
                 <!-- project sidebar area -->
                 <div class="col-sm-5 project-sidebar right">
-                    <div class="section-description light">
-                        <h4>{{pet.pet_name}}</h4>
+                    <div class="section-description light text-center">
+                        <h2>{{pet.pet_name}}</h2>
+                        
+                        <!-- / project-info -->
+                        
+                        <div>
+                          <button v-if="pet.favorite" v-on:click="unfavoritePet()" type="button" class="btn">
+                            <i class="fa fa-heart" style="color:#f442b0"></i>
+                          </button>
+                          <button v-else v-on:click="makeFavoritePet()" type="button" class="btn"><i class="fa fa-heart-o" style="color:#f442b0"></i>
+                          </button>
+                        </div>
+
                         <div v-if="Array.isArray(pet.pet_breeds)">
-                          <p v-for="breed in pet.pet_breeds">
+                          <h5 v-for="breed in pet.pet_breeds">
                             {{breed.$t}}
-                          </p>
+                          </h5>
                         </div>
                         <div v-else> 
-                          {{pet.pet_breeds.$t }} 
+                          <h5>{{pet.pet_breeds.$t }}</h5>
                         </div>
-                        <h4 class="space-top-30">PROJECT INFO</h4>
-                        <div class="project-info">
-                            <div class="info">
-                                <p><i class="lnr lnr-user"></i><span>Client:<a href="#x"> King Studio</a></span></p>
-                            </div>
-                            <div class="info">
-                                <p><i class="lnr lnr-star"></i><span>Skills:<a href="#x"> Graphic Design</a>, <a href="#x"> Branding</a></span></p>
-                            </div>
-                            <div class="info">
-                                <p><i class="lnr lnr-calendar-full"></i><span>Date: Nov. 15, 2016</span></p>
-                            </div>
-                            <div class="info">
-                                <p><i class="lnr lnr-map"></i><span>Location: Miami</span></p>
-                            </div>
-                        </div><!-- / project-info -->
-
-                        <div class="info-buttons">
-                            <a href="" class="btn btn-primary-filled"><i class="lnr lnr-eye"></i><span> View Demo</span></a>
-                            <a href="contact.html" class="btn btn-default-filled"><i class="lnr lnr-phone-handset"></i><span> Contact</span></a>
-                        </div><!-- / info-buttons -->
+                        <h5>{{ pet.pet_age }}</h5>
 
                     </div><!-- section-description -->
 
@@ -55,67 +48,29 @@
             </div><!-- / row -->
 
             <div class="row">
-              <h4>PET DESCRIPTION</h4>
+              <h4>Description</h4>
               <p>{{pet.pet_description}}</p>
             </div>
         </section>
+        <div class="text-center space-top-30">
+          <a href="https://www.petfinder.com/">Adopt {{pet.pet_name}} on Petfinder</a> | 
+          <a href="/pets">Back to All Pets</a> | 
+          <a href="/users/me">User Profile</a>
+        </div>
         <!-- / project content + sidebar --> 
 
-    </div><!-- / container -->
+      </div><!-- / container -->
 
     <!-- / content -->
-
-
-
-
-
-
-
-
-
-    <div class = "container">
-
-      <section id="project">
-        <div class="row">
-
-          <div class="col-sm-7">
-            <div class="project-content-area">
-              <div>
-                <img :src="pet.meme_url" :alt="pet.pet_name">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-5 project-sidebar right">
-            <div class="section-description light">
-              <h2>About {{pet.pet_name}}</h2>
-              <button v-if="pet.favorite" v-on:click="unfavoritePet()" type="button" class="btn">
-                <i class="fa fa-heart" style="color:#f442b0"></i>
-              </button>
-              <button v-else v-on:click="makeFavoritePet()" type="button" class="btn"><i class="fa fa-heart-o" style="color:#f442b0"></i>
-              </button>
-            </div>
-            <div  class="section-description light">
-              <h4>{{ pet.pet_age }}</h4>
-              <h4>{{ pet.pet_breeds }}</h4>
-              <!-- <h4>{{ user.favorites[0]["petfinder_id"] }}</h4> -->
-              <h4>{{ user.fav_petfinder_ids }}</h4>
-              <!-- note: gotta fix breeds -->
-              <p>{{ pet.pet_description }}</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <div class=text-center>
-        <a href="https://www.petfinder.com/">Adopt {{pet.pet_name}} on Petfinder</a> | 
-        <a href="/pets">Back to All Pets</a> | 
-        <a href="/users/me">User Profile</a>
-      </div>
-
     </div>
   </div>
 </template>
+
+<style>
+  div.section-description {
+    margin-top:50%;
+  }
+</style>
 
 <script>
 import axios from "axios";
