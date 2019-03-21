@@ -29,7 +29,7 @@
       </section>
 
       <section id="portfolio" class="info-box two-col">
-        <div class = "container">
+        <div class="container" v-if="user.favorites.length > 0">
         <h2 class="text-center">Favorites</h2>
           <ul class="row portfolio list-unstyled lightbox" id="grid" >
             <!-- <div v-for="pet in pets"> -->
@@ -60,10 +60,11 @@
             <!-- </div> -->
           </ul>
         </div>
+        <div class="pricing-table-button text-center" >
+          <h2>Favorites</h2>
+            <a href="/pets" class="btn btn-lg btn-primary-filled">Search for pets to add favorites</a>
+        </div>
       </section>
-        
-      <router-link v-bind:to="'/users/me/edit'">Edit my profile</router-link> | 
-      <router-link v-bind:to="'/pets'">Search for pets</router-link>
       
     </div>
 
