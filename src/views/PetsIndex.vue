@@ -10,8 +10,28 @@
 
 
     <section id="portfolio" class="w-shadow">
+
+      <div>
+        <h4>
+          Search by Breed:
+          <input type="text" class="form-control" v-model="breedFilter" list="petBreeds">
+        </h4>
+      </div>
+
+      <datalist id="petBreeds">
+        <option v-for="pet in uniqBreeds">{{pet.breed_list}}</option>
+      </datalist>
+
+      <div>
+        <button type="button" class="btn btn-sm btn-primary-filled" v-on:click="setSortAttribute('pet_age')">Sort by Age
+          <i v-if="sortAttribute == 'pet_age' && sortAscending == 1">^</i>
+          <i v-if="sortAttribute == 'pet_age' && sortAscending == -1">v</i>
+        </button>
+      </div>
+
+
       <ul class="row portfolio list-unstyled lightbox" id="grid">
-        <li class="col-xs-6 project" v-for="pet in filterBy(pets, 'Baby', 'pet_age')">
+        <li class="col-xs-6 project" v-for="pet in orderBy(filterBy(pets, breedFilter, 'breed_list'), sortAttribute, sortAscending)" v-bind:key="pet.pet_id">
             <div class="img-bg-color primary">
                 <!-- / project-link -->
                 <img :src="pet.pet_photo" :alt="pet.pet_name">
@@ -60,14 +80,13 @@
     color: #e0e1e2;
   }
 
-  /*div.project-hover-tools {
-    margin: 0, 50px, 0, 0;
-  }*/
 </style>
 
 <script>
 import axios from "axios";
 import Vue2Filters from "vue2-filters";
+import uniq from 'lodash/uniq';
+import underscore from 'vue-underscore';
 
 export default {
   mixins: [Vue2Filters.mixin],
@@ -75,8 +94,18 @@ export default {
     return {
       pets: [],
       user: {},
+      breedFilter: '',
+      sortAttribute: 'breed_list',
+      sortAscending: 1,
+      breedList: ''
     };
   },
+  computed:{
+    uniqBreeds () {
+      return _.uniqBy(this.pets, 'breed_list')
+    }
+  },
+
   created: function() {
     axios.get("/api/pets").then(response => {
       this.pets = response.data;
@@ -87,7 +116,18 @@ export default {
       console.log(response.data);
     });
   },
-  methods: {}
+  methods: {
+    setSortAttribute: function(attribute) {
+      if (this.sortAttribute === attribute) {
+        this.sortAscending = this.sortAscending * -1;
+      } else {
+        this.sortAscending = 1;
+      }
+      this.sortAttribute = attribute;
+    }
+  }
 };
 
 </script>
+
+<!-- filterBy(pets, 'Baby', 'pet_age') -->

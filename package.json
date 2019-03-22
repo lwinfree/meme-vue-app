@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "underscore": "^1.9.1",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vue-social-sharing": "^2.4.2",
+    "vue-underscore": "^0.1.4",
     "vue2-filters": "^0.5.1"
   },
   "devDependencies": {
