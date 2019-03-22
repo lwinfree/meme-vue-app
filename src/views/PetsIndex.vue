@@ -24,8 +24,8 @@
 
       <div>
         <button type="button" class="btn btn-sm btn-primary-filled" v-on:click="setSortAttribute('pet_age')">Sort by Age
-          <i v-if="sortAttribute == 'pet_age' && sortAscending == 1">^</i>
-          <i v-if="sortAttribute == 'pet_age' && sortAscending == -1">v</i>
+          <i v-if="sortAttribute == 'pet_age' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
+          <i v-if="sortAttribute == 'pet_age' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
         </button>
       </div>
 
@@ -97,10 +97,11 @@ export default {
       breedFilter: '',
       sortAttribute: 'breed_list',
       sortAscending: 1,
-      breedList: ''
+      breedList: '',
+      breeds: ''
     };
   },
-  computed:{
+  computed: {
     uniqBreeds () {
       return _.uniqBy(this.pets, 'breed_list')
     }
