@@ -1789,7 +1789,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 #header-banner.demo-1 {
-  background: url("https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg") no-repeat;
+  background: url("../images/shiba.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #cccccc;

@@ -1,7 +1,7 @@
 <template>
   <div class="login">
 
-    <div id="header-banner">
+    <div id="header-banner" class="demo-1">
         <div class="banner-content single-page text-center">
           <div class="banner-border">
             <div class="banner-info">

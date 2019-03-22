@@ -1,13 +1,15 @@
 <template>
   <div class="users-show">
 
-  <div id="header-banner">
+  <div id="header-banner" class="demo-1">
         <div class="banner-content single-page text-center">
+          <div class="banner-border">
             <div class="banner-info">
                 <h1 class="space-bottom-30">{{ user.name }}</h1>
                 <router-link v-bind:to="'/users/me/edit'">Edit my profile</router-link> | 
                 <router-link v-bind:to="'/pets'">Search for pets</router-link>
             </div>
+          </div>
         </div>
     </div>
 

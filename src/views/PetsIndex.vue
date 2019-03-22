@@ -1,33 +1,51 @@
 <template>
   <div class="pets-index">
 
-
     <!-- content -->
 
     <h1 class=text-center>Found {{ pets.length }} pets in {{ user.zipcode }}:</h1>
 
     <!-- portfolio section -->
 
-
     <section id="portfolio" class="w-shadow">
 
-      <div>
-        <h4>
-          Search by Breed:
-          <input type="text" class="form-control" v-model="breedFilter" list="petBreeds">
-        </h4>
-      </div>
+        <div class="panel-group">
+          <div class="panel">
+            <div class="panel-heading text-center">
+                <a class="panel-title collapsed" data-toggle="collapse" href="#panel1">Filters</a>
+            </div>
 
-      <datalist id="petBreeds">
-        <option v-for="pet in uniqBreeds">{{pet.breed_list}}</option>
-      </datalist>
+            <div id="panel1" class="panel-collapse collapse">
+              <div class="row">
+                <div class="col-sm-6 text-center">
+                  <div>
+                    <p>
+                      Search by Breed:
+                      <input type="text" class="contact-area" v-model="breedFilter" list="petBreeds">
+                    </p>
+                  </div>
+                </div>
 
-      <div>
-        <button type="button" class="btn btn-sm btn-primary-filled" v-on:click="setSortAttribute('pet_age')">Sort by Age
-          <i v-if="sortAttribute == 'pet_age' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
-          <i v-if="sortAttribute == 'pet_age' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
-        </button>
-      </div>
+                <div class="col-sm-6">
+                  <datalist id="petBreeds">
+                    <option v-for="pet in uniqBreeds">{{pet.breed_list}}</option>
+                  </datalist>
+
+                  <div class="text-center">
+                    <button type="button" class="btn btn-sm btn-primary" v-on:click="setSortAttribute('pet_age')">Sort by Age
+                      <i v-if="sortAttribute == 'pet_age' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
+                      <i v-if="sortAttribute == 'pet_age' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div><!-- / panel -->
+        </div><!-- / panel-group -->
+
+      
 
 
       <ul class="row portfolio list-unstyled lightbox" id="grid">
@@ -78,6 +96,9 @@
   }
   div.project-details h4, h5 {
     color: #e0e1e2;
+  }
+  div.panel-collapse p {
+    color: #c39d6d;
   }
 
 </style>

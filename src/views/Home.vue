@@ -1,10 +1,4 @@
 <template>
-  <!-- <div class="home">
-    <h1></h1>
-    <h2><a href="/login">Sign in</a> to search for adoptable pets.</h2>
-    <h2>New User? Sign up <a href="/signup">here</a></h2>
-  </div> -->
-
 
   <!-- code below adds a banner image -->
     <div id="header-banner" class="demo-1">
