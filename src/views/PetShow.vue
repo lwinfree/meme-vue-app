@@ -7,78 +7,82 @@
       <div class="container">
         <!-- project content + sidebar -->
         <section id="project">
-            <div class="row">
-                <!-- project content area -->
-                <div class="col-sm-7">
-                    <div class="project-content-area">
-                        <img :src="pet.meme_url" alt="" class="space-bottom-30">
-                    </div><!-- / project-content-area -->    
+          <div v-if="pet.no_pet">
+            <h1 text-center>There is no information for this pet.
+            </h1>
+          </div>
+          <div class="row" v-else>
+            <!-- project content area -->
+            <div class="col-sm-7">
+              <div class="project-content-area">
+                  <img :src="pet.meme_url" alt="" class="space-bottom-30">
+              </div><!-- / project-content-area -->    
+            </div>
+            <!-- / project-content-area -->
+
+            <!-- project sidebar area -->
+            <div class="col-sm-5 project-sidebar right">
+              <div class="section-description light text-center">
+                <h2>{{pet.pet_name}}</h2>
+                
+                <!-- / project-info -->
+                
+                <div>
+                  <button v-if="pet.favorite" v-on:click="unfavoritePet()" type="button" class="btn">
+                    <i class="fa fa-heart" style="color:#f442b0"></i>
+                  </button>
+                  <button v-else v-on:click="makeFavoritePet()" type="button" class="btn"><i class="fa fa-heart-o" style="color:#f442b0"></i>
+                  </button>
                 </div>
-                <!-- / project-content-area -->
 
-                <!-- project sidebar area -->
-                <div class="col-sm-5 project-sidebar right">
-                    <div class="section-description light text-center">
-                        <h2>{{pet.pet_name}}</h2>
-                        
-                        <!-- / project-info -->
-                        
-                        <div>
-                          <button v-if="pet.favorite" v-on:click="unfavoritePet()" type="button" class="btn">
-                            <i class="fa fa-heart" style="color:#f442b0"></i>
-                          </button>
-                          <button v-else v-on:click="makeFavoritePet()" type="button" class="btn"><i class="fa fa-heart-o" style="color:#f442b0"></i>
-                          </button>
-                        </div>
+                <div class="space-top-30" v-if="Array.isArray(pet.pet_breeds)">
+                  <h5 v-for="breed in pet.pet_breeds">
+                    {{breed.$t}}
+                  </h5>
+                </div>
+                <div class="space-top-30" v-else> 
+                  <h5>{{pet.pet_breeds.$t }}</h5>
+                </div>
+                <div class="space-top-30">
+                  <h5>{{ pet.pet_age }}</h5>
+                </div>
 
-                        <div class="space-top-30" v-if="Array.isArray(pet.pet_breeds)">
-                          <h5 v-for="breed in pet.pet_breeds">
-                            {{breed.$t}}
-                          </h5>
-                        </div>
-                        <div class="space-top-30" v-else> 
-                          <h5>{{pet.pet_breeds.$t }}</h5>
-                        </div>
-                        <div class="space-top-30">
-                          <h5>{{ pet.pet_age }}</h5>
-                        </div>
-
-                      <div class="sharing">
-                        <h5>
-                          Share {{pet.pet_name}} with your friends!
-                        </h5>
-                        <social-sharing url="'/pets/' + favorite.petfinder_id"
-                         title="Check out this adoptable pet"
-                         description="This pet is adorable and adoptable!"
-                         quote="Don't you want to adopt this pet?"
-                         hashtags="adopt,pet,cute"
-                         inline-template>
-                          <div>
-                            <button class="btn btn-sm btn-primary">
-                              <network network="email">
-                                <i class="fa fa-envelope"></i> Email   
-                              </network>
-                            </button>
-                            <button class="btn btn-sm btn-primary">
-                              <network network="facebook">
-                                <i class="fa fa-facebook"></i> Facebook   
-                              </network>
-                            </button>
-                            <button class="btn btn-sm btn-primary">
-                              <network network="twitter">
-                                <i class="fa fa-twitter"></i> Twitter
-                              </network>
-                            </button>
-                          </div>
-                        </social-sharing>
-                      </div>
+                <div class="sharing">
+                  <h5>
+                    Share {{pet.pet_name}} with your friends!
+                  </h5>
+                  <social-sharing url="'/pets/' + favorite.petfinder_id"
+                   title="Check out this adoptable pet"
+                   description="This pet is adorable and adoptable!"
+                   quote="Don't you want to adopt this pet?"
+                   hashtags="adopt,pet,cute"
+                   inline-template>
+                    <div>
+                      <button class="btn btn-sm btn-primary">
+                        <network network="email">
+                          <i class="fa fa-envelope"></i> Email   
+                        </network>
+                      </button>
+                      <button class="btn btn-sm btn-primary">
+                        <network network="facebook">
+                          <i class="fa fa-facebook"></i> Facebook   
+                        </network>
+                      </button>
+                      <button class="btn btn-sm btn-primary">
+                        <network network="twitter">
+                          <i class="fa fa-twitter"></i> Twitter
+                        </network>
+                      </button>
+                    </div>
+                  </social-sharing>
+                </div>
 
 
-                    </div><!-- section-description -->
+              </div><!-- section-description -->
 
-                </div><!-- / col-sm-4 col-md-3 -->
-                <!-- / project sidebar area -->
-            </div><!-- / row -->
+            </div><!-- / col-sm-4 col-md-3 -->
+            <!-- / project sidebar area -->
+          </div><!-- / row -->
 
             <div class="row description">
               <h4>Description</h4>
