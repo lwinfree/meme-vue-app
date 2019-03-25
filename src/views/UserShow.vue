@@ -29,7 +29,7 @@
         </div>
       </section>
 
-      <section id="portfolio" class="w-shadow">
+      <section id="portfolio" class="info-box two-col w-shadow">
         <h2 class="text-center">Favorites</h2>
           <div class="pricing-table-button text-center">
             <a href="/pets" class="btn btn-lg btn-primary-filled">Search for pets to add favorites</a>
@@ -39,7 +39,7 @@
               <!-- <router-link v-bind:to="'/pets/' + pet.pet_id"> -->
                 
                 <li class="col-xs-6 project" v-for="favorite in orderBy(user.favorites, 'pet_info.pet_name')">
-                    <div class="img-bg-color primary">
+                    <div class="img-bg-color show">
                         <!-- / project-link -->
                         <img :src="favorite.pet_info.pet_photo" :alt="favorite.pet_info.pet_name">
                         <!-- / project-image -->
@@ -67,6 +67,15 @@
   </div>
 </template>
 
+<style>
+  div.img-bg-color.show {
+    height: auto;
+  }
+  div img {
+    height: auto;
+    width: auto;
+  }
+</style>
 
 <script>
 import axios from "axios";
@@ -83,6 +92,7 @@ export default {
     axios.get("/api/users/me").then(response => {
       this.user = response.data;
       console.log(response.data);
+      customMasonry();
     });
   },
   methods: {}

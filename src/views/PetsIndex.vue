@@ -52,7 +52,7 @@
         <li class="col-xs-6 project" v-for="pet in orderBy(filterBy(pets, breedFilter, 'breed_list'), sortAttribute, sortAscending)" v-bind:key="pet.pet_id">
             <div class="img-bg-color primary">
                 <!-- / project-link -->
-                <img :src="pet.pet_photo" :alt="pet.pet_name">
+                <img class="index" :src="pet.pet_photo" :alt="pet.pet_name">
                 <!-- / project-image -->
 
                 <!-- project-hover-tools -->
@@ -90,7 +90,7 @@
   div.img-bg-color.primary {
     height: 400px;
   }
-  div img {
+  div img.index {
     height: 100%;
     width: auto;
   }
