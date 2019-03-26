@@ -24,16 +24,54 @@
               <i class="fa fa-map-marker"></i> {{ user.zipcode }}
             </h4>
           </div>
+
           <div class="col-sm-6 contact-info text-center space-bottom">
-            <div id="contact-form">
-              <form v-on:submit.prevent="submit(user)" id="contactForm">
-                <div class="form-group">
-                  <input class="form-control" type="number" v-model="user.zipcode">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Update my Zipcode
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Edit Zipcode</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="contact-form">
+                      <form v-on:submit.prevent="submit(user)" id="contactForm">
+                        <div class="form-group">
+                          Zipcode: <input class="form-control" type="number" v-model="user.zipcode">
+                        </div>
+                        <div class="form-group">
+                          Password: <input class="form-control" type="password" required v-model="user.password">
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-primary-filled btn-form-submit">Update My Zipcode</button>
+                      </form>
+                    </div>
+
+                    <ul>
+                      <li class="text-success">{{ message }}</li>
+                    </ul>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" v-on:click="message = ''">Close</button>
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-xs btn-primary-filled btn-form-submit">Update My Zipcode</button>
-              </form>
+              </div>
             </div>
           </div>
+
+          
+          
+
+
         </div>
       </section>
 
@@ -83,6 +121,10 @@
     height: auto;
     width: auto;
   }
+  li.text-success {
+    font-size: 1.5em;
+    margin-top: 15px;
+  }
 </style>
 
 <script>
@@ -94,6 +136,7 @@ export default {
   data: function() {
     return {
       user: {},
+      message: ""
     };
   },
   created: function(user) {
@@ -106,11 +149,13 @@ export default {
   methods: {
     submit: function(user) {
       var userParams = {
-        zipcode: user.zipcode
+        zipcode: user.zipcode,
+        password: user.password
       };
       axios.patch("/api/users/me", userParams).then(response => {
         console.log("Updated!", response.data);
         this.$router.push("/users/me");
+        this.message = "Success!"
       }).catch(error => {
         this.errors = error.response.data.errors;
       });
