@@ -12,7 +12,7 @@
         <div class="panel-group">
           <div class="panel">
             <div class="panel-heading text-center">
-                <a class="panel-title collapsed" data-toggle="collapse" href="#panel1">Filters</a>
+              <a class="panel-title collapsed" data-toggle="collapse" href="#panel1">Filters</a>
             </div>
 
             <div id="panel1" class="panel-collapse collapse">
@@ -23,6 +23,7 @@
                       Search by Breed:
                       <input type="text" class="contact-area" v-model="breedFilter" list="petBreeds">
                     </p>
+                    <button type="button" class="btn btn-xs btn-default" v-on:click="breedFilter=''">Clear</button>
                   </div>
                 </div>
 
@@ -35,6 +36,9 @@
                     <button type="button" class="btn btn-sm btn-primary" v-on:click="setSortAttribute('pet_age')">Sort by Age
                       <i v-if="sortAttribute == 'pet_age' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
                       <i v-if="sortAttribute == 'pet_age' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
+                    </button> <br>
+                    <button type="button" class="btn btn-xs btn-default" v-on:click="setSortAttribute('')">
+                      Clear
                     </button>
                   </div>
                 </div>
