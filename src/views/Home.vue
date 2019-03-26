@@ -21,6 +21,12 @@
 
 </template>
 
+<style>
+  h1 {
+    line-height: 1.5em;
+  }
+</style>
+
 <script>
 import axios from 'axios';
 export default {

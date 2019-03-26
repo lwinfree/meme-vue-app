@@ -27,11 +27,11 @@
                 
                 <!-- / project-info -->
                 
-                <div>
+                <div class="favorite">
                   <button v-if="pet.favorite" v-on:click="unfavoritePet()" type="button" class="btn">
                     <i class="fa fa-heart" style="color:#f442b0"></i>
                   </button>
-                  <button v-else v-on:click="makeFavoritePet()" type="button" class="btn"><i class="fa fa-heart-o" style="color:#f442b0"></i>
+                  <button v-else v-on:click="makeFavoritePet()" type="button" class="btn"><i class="fa fa-heart-o"></i>
                   </button>
                 </div>
 
@@ -119,6 +119,8 @@
   div.sharing h5{
     color: rgb(198, 154, 111);
   }
+
+  font-size: x-large;
 </style>
 
 <script>

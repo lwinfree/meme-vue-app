@@ -16,16 +16,19 @@
     <div  id="page-content" class = "container">
       <section id="project">
         <div class="row">
-          <div class="col-sm-6 contact-info text-center space-bottom">
+          <div class="col-sm-4 contact-info text-center space-bottom">
             <h4>
               <i class="fa fa-envelope"></i> {{ user.email }}
             </h4>
+          </div>
+
+          <div class="col-sm-4 contact-info text-center space-bottom">
             <h4 space-top-30>
               <i class="fa fa-map-marker"></i> {{ user.zipcode }}
             </h4>
           </div>
 
-          <div class="col-sm-6 contact-info text-center space-bottom">
+          <div class="col-sm-4 contact-info text-center space-bottom">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
               Update my Zipcode
@@ -124,6 +127,9 @@
   li.text-success {
     font-size: 1.5em;
     margin-top: 15px;
+  }
+  div.banner-info a {
+    font-size: large;
   }
 </style>
 
