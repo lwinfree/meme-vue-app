@@ -51,7 +51,7 @@
                   <h5>
                     Share {{pet.pet_name}} with your friends!
                   </h5>
-                  <social-sharing url="'/pets/' + favorite.petfinder_id"
+                  <social-sharing :url="'https://warm-tundra-75183.herokuapp.com/pets/' + pet.pet_id"
                    title="Check out this adoptable pet"
                    description="This pet is adorable and adoptable!"
                    quote="Don't you want to adopt this pet?"

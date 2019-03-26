@@ -1,0 +1,389 @@
+/* Buttons */
+
+.btn {
+    font-weight: $regular;
+    font-size: 13px;
+    letter-spacing: $letter-spacing;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition:  all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0;
+    padding: 10px 18px;
+    margin: 5px;
+}
+
+.btn span {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.btn:hover {
+    background: transparent;
+}
+
+.btn:focus {
+    background: transparent;
+}
+
+.btn-lg {
+    font-size: 15px;
+    padding: 12px 20px;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 8px 14px;
+}
+
+.btn-xs {
+    font-size: 10px;
+    padding: 5px 12px;
+}
+
+.btn-rounded {
+    border-radius: 5px !important;
+}
+
+.btn-pill {
+    border-radius: 50px !important;
+}
+
+.btn-circle {
+    border-radius: 50% !important;
+    height: 40px;
+    width: 40px;
+    padding: 3px !Important;
+}
+
+.btn-square {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    padding: 3px !Important;
+}
+
+.btn-link {
+    color: $primary;
+}
+
+.btn-link:hover {
+    color: $primary-hover;
+    text-decoration: none;
+}
+
+.btn-link:focus {
+    color: $primary-hover;
+    text-decoration: none;
+}
+
+a.btn {
+    white-space: nowrap;
+}
+
+
+/* Default Button */
+
+.btn-default, .btn-default:active, .btn-default:focus {
+    color: $default;
+    border: 2px solid $default;
+    background: transparent;
+}
+
+.btn-default:hover {
+    color: $white;
+    background: $default;
+    border: 2px solid $default;
+}
+
+.btn-default-filled, .btn-default-filled:active, .btn-default-filled:focus  {
+    color: $white;
+    background: $default;
+    border: 2px solid $default;
+}
+
+.btn-default-filled:hover {
+    color: $white;
+    background: $default-hover;
+    border: 2px solid $default-hover;
+}
+
+/* / End Default Button */
+
+
+/* Primary Button */
+
+.btn-primary, .btn-primary:active, .btn-primary:focus  {
+    color: $primary;
+    border: 2px solid $primary;
+    background: transparent;
+}
+
+.btn-primary:hover {
+    color: $white;
+    background: $primary;
+    border: 2px solid $primary;
+}
+
+.btn-primary-filled, .btn-primary-filled:active, .btn-primary-filled:focus  {
+    color: $white;
+    background: $primary;
+    border: 2px solid $primary;
+}
+
+.btn-primary-filled:hover {
+    color: $white;
+    background: $primary-hover;
+    border: 2px solid $primary-hover;
+}
+
+/* / End Primary Button */
+
+
+/* Success Button */
+
+.btn-success, .btn-success:active, .btn-success:focus {
+    color: $success;
+    border: 2px solid $success;
+    background: transparent;
+}
+
+.btn-success:hover {
+    color: $white;
+    background: $success;
+    border: 2px solid $success;
+}
+
+.btn-success-filled, .btn-success-filled:active, .btn-success-filled:focus {
+    color: $white;
+    background: $success;
+    border: 2px solid $success;
+}
+
+.btn-success-filled:hover {
+    color: $white;
+    background: $success-hover;
+    border: 2px solid $success-hover;
+}
+
+/* / End Success Button */
+
+
+/* Info Button */
+
+.btn-info, .btn-info:active, .btn-info:focus {
+    color: $info;
+    border: 2px solid $info;
+    background: transparent;
+}
+
+.btn-info:hover {
+    color: $white;
+    background: $info;
+    border: 2px solid $info;
+}
+
+.btn-info-filled, .btn-info-filled:active, .btn-info-filled:focus {
+    color: $white;
+    background: $info;
+    border: 2px solid $info;
+}
+
+.btn-info-filled:hover {
+    color: $white;
+    background: $info-hover;
+    border: 2px solid $info-hover;
+}
+
+/* / End Info Button */
+
+
+/* Warning Button */
+
+.btn-warning, .btn-warning:active, .btn-warning:focus  {
+    color: $warning;
+    border: 2px solid $warning;
+    background: transparent;
+}
+
+.btn-warning:hover {
+    color: $white;
+    background: $warning;
+    border: 2px solid $warning;
+}
+
+.btn-warning-filled, .btn-warning-filled:active, .btn-warning-filled:focus  {
+    color: $white;
+    background: $warning;
+    border: 2px solid $warning;
+}
+
+.btn-warning-filled:hover {
+    color: $white;
+    background: $warning-hover;
+    border: 2px solid $warning-hover;
+}
+
+/* / End Warning Button */
+
+
+/* Danger Button */
+
+.btn-danger, .btn-danger:active, .btn-danger:focus {
+    color: $danger;
+    border: 2px solid $danger;
+    background: transparent;
+}
+
+.btn-danger:hover {
+    color: $white;
+    background: $danger;
+    border: 2px solid $danger
+}
+
+.btn-danger-filled, .btn-danger-filled:active, .btn-danger-filled:focus {
+    color: $white;
+    background: $danger;
+    border: 2px solid $danger;
+}
+
+.btn-danger-filled:hover {
+    color: $white;
+    background: $danger-hover;
+    border: 2px solid $danger-hover;
+}
+
+/* / End Danger Button */
+
+/* Button Groups */
+
+.btn-group-xl>.btn {
+    font-size: 20px;
+    padding: 9px 10px;
+    border-radius: 5px;
+}
+
+.btn-group-lg>.btn {
+    font-size: 15px;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+
+.btn-group>.btn {
+    border-radius: 5px;
+}
+
+.btn-group-sm>.btn {
+    font-size: 12px;
+    padding: 5px 4px;
+    border-radius: 5px;
+}
+
+.btn-group-xs>.btn {
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/* / End Button Groups */
+
+
+/* Dropdown Buttons */
+
+.dropdown-buttons {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-buttons .btn-group > .btn {
+    padding-left: 17px;
+}
+
+.dropdown-buttons .dropdown-icon {
+    margin: 0 2px 0 10px;
+}
+
+.dropdown-buttons .btn {
+    border-radius: 0;
+}
+
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: $white;
+    background-color: $default;
+    border-color: $default;
+}
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: $white;
+    background-color: $default;
+    border-color: $default;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open>.dropdown-toggle.btn-success.focus, .open>.dropdown-toggle.btn-success:focus, .open>.dropdown-toggle.btn-success:hover {
+    color: $white;
+    background-color: $success;
+    border-color: $success;
+}
+
+.btn-success.active, .btn-success:active, .open>.dropdown-toggle.btn-success {
+    color: $white;
+    background-color: $success;
+    border-color: $success;
+}
+
+.btn-info.active.focus, .btn-info.active:focus, .btn-info.active:hover, .btn-info:active.focus, .btn-info:active:focus, .btn-info:active:hover, .open>.dropdown-toggle.btn-info.focus, .open>.dropdown-toggle.btn-info:focus, .open>.dropdown-toggle.btn-info:hover {
+    color: $white;
+    background-color: $info;
+    border-color: $info;
+}
+
+.btn-info.active, .btn-info:active, .open>.dropdown-toggle.btn-info {
+    color: $white;
+    background-color: $info;
+    border-color: $info;
+}
+
+.btn-warning.active.focus, .btn-warning.active:focus, .btn-warning.active:hover, .btn-warning:active.focus, .btn-warning:active:focus, .btn-warning:active:hover, .open>.dropdown-toggle.btn-warning.focus, .open>.dropdown-toggle.btn-warning:focus, .open>.dropdown-toggle.btn-warning:hover {
+    color: $white;
+    background-color: $warning;
+    border-color: $warning;
+}
+
+.btn-warning.active, .btn-warning:active, .open>.dropdown-toggle.btn-warning {
+    color: $white;
+    background-color: $warning;
+    border-color: $warning;
+}
+
+.btn-danger.active.focus, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger:active.focus, .btn-danger:active:focus, .btn-danger:active:hover, .open>.dropdown-toggle.btn-danger.focus, .open>.dropdown-toggle.btn-danger:focus, .open>.dropdown-toggle.btn-danger:hover {
+    color: $white;
+    background-color: $danger;
+    border-color: $danger;
+}
+
+.btn-danger.active, .btn-danger:active, .open>.dropdown-toggle.btn-danger {
+    color: $white;
+    background-color: $danger;
+    border-color: $danger;
+}
+
+/* / End Dropdown Buttons */
+/* / End Buttons */

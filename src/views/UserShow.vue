@@ -20,11 +20,19 @@
             <h4>
               <i class="fa fa-envelope"></i> {{ user.email }}
             </h4>
-          </div>
-          <div class="col-sm-6 contact-info text-center space-bottom">
-            <h4>
+            <h4 space-top-30>
               <i class="fa fa-map-marker"></i> {{ user.zipcode }}
             </h4>
+          </div>
+          <div class="col-sm-6 contact-info text-center space-bottom">
+            <div id="contact-form">
+              <form v-on:submit.prevent="submit(user)" id="contactForm">
+                <div class="form-group">
+                  <input class="form-control" type="number" v-model="user.zipcode">
+                </div>
+                <button type="submit" class="btn btn-xs btn-primary-filled btn-form-submit">Change My Zipcode</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -88,13 +96,25 @@ export default {
       user: {},
     };
   },
-  created: function() {
+  created: function(user) {
     axios.get("/api/users/me").then(response => {
       this.user = response.data;
       console.log(response.data);
       customMasonry();
     });
   },
-  methods: {}
+  methods: {
+    submit: function(user) {
+      var userParams = {
+        zipcode: user.zipcode
+      };
+      axios.patch("/api/users/me", userParams).then(response => {
+        console.log("Updated!", response.data);
+        this.$router.push("/users/me");
+      }).catch(error => {
+        this.errors = error.response.data.errors;
+      });
+    },
+  }
 };
 </script>

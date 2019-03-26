@@ -1,0 +1,198 @@
+/* Labels Badges & Alerts */
+
+/* Labels */
+
+.label {
+    font-weight: 400;
+    padding: .2em .6em;
+    line-height: 2.5em;
+    border-radius: 0;
+}
+
+.label-pill {
+    border-radius: 5em;
+}
+
+.label-default {
+    color: $default;
+    background-color: transparent;
+    border: 2px solid $default;
+}
+
+.label-default-filled {
+    color: $white;
+    background-color: $default;
+    border: 2px solid $default;
+}
+
+.label-primary {
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
+}
+
+.label-primary-filled {
+    color: $white;
+    background-color: $primary;
+    border: 2px solid $primary;
+}
+
+.label-success {
+    color: $success;
+    background-color: transparent;
+    border: 2px solid $success;
+}
+
+.label-success-filled {
+    color: $white;
+    background-color: $success;
+    border: 2px solid $success;
+}
+
+.label-info {
+    color: $info;
+    background-color: transparent;
+    border: 2px solid $info;
+}
+
+.label-info-filled {
+    color: $white;
+    background-color: $info;
+    border: 2px solid $info;
+}
+
+.label-warning {
+    color: $warning;
+    background-color: transparent;
+    border: 2px solid $warning;
+}
+
+.label-warning-filled {
+    color: $white;
+    background-color: $warning;
+    border: 2px solid $warning;
+}
+
+.label-danger {
+    color: $danger;
+    background-color: transparent;
+    border: 2px solid $danger;
+}
+
+.label-danger-filled {
+    color: $white;
+    background-color: $danger;
+    border: 2px solid $danger;
+}
+
+/* / End Labels */
+
+/* Badges */
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: $white;
+    background-color: $primary;
+}
+
+.nav-pills>li>a:hover {
+    color: $white;
+    background-color: $grey;
+}
+
+.nav-pills>li>a {
+    font-size: 12px;
+    border-radius: 0;
+    padding: 8px 14px;
+}
+
+.badge {
+    color: $white;
+    background-color: $primary;
+    font-size: 10px;
+    font-weight: $regular;
+    border-radius: 0;
+    padding: 6px 8px;
+}
+
+.active .badge {
+    color: $primary !important;
+}
+
+/* / End Badges */
+
+/* Alerts */
+
+.alert {
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+.alert-success {
+    color: $white;
+    background-color: $success;
+    border-color: $success-hover;
+}
+
+.alert-success .close {
+    color: $success-hover;
+}
+
+.alert-info {
+    color: $white;
+    background-color: $info;
+    border-color: $info-hover;
+}
+
+.alert-info .close {
+    color: $info-hover;
+}
+
+.alert-warning {
+    color: $white;
+    background-color: $warning;
+    border-color: $warning-hover;
+}
+
+.alert-warning .close {
+    color: $warning-hover;
+}
+
+.alert-danger {
+    color: $white;
+    background-color: $danger;
+    border-color: $danger-hover;
+}
+
+.alert-danger .close {
+    color: $danger-hover;
+}
+
+.alert-dismissible .close {
+    font-size: 16px;
+    top: -14px;
+    right: -31px;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.alert-dismissible .close:hover {
+    opacity: 0.8;
+}
+
+.alert-sm {
+    font-size: 14px;
+    padding: 5px;
+}
+
+.alert i {
+    margin: 0 10px 0 5px;
+}
+
+.alert-sm.alert-dismissible .close {
+    top: -5px;
+    right: -2px;
+}
+
+/* / End Alerts */
+
+/* / End Labels Badges & Alerts */
