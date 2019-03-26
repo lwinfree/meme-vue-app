@@ -30,7 +30,7 @@
                 <div class="form-group">
                   <input class="form-control" type="number" v-model="user.zipcode">
                 </div>
-                <button type="submit" class="btn btn-xs btn-primary-filled btn-form-submit">Change My Zipcode</button>
+                <button type="submit" class="btn btn-xs btn-primary-filled btn-form-submit">Update My Zipcode</button>
               </form>
             </div>
           </div>
