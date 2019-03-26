@@ -33,9 +33,9 @@
                   </datalist>
 
                   <div class="text-center">
-                    <button type="button" class="btn btn-sm btn-primary" v-on:click="setSortAttribute('pet_age')">Sort by Age
-                      <i v-if="sortAttribute == 'pet_age' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
-                      <i v-if="sortAttribute == 'pet_age' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
+                    <button type="button" class="btn btn-sm btn-primary" v-on:click="setSortAttribute('age_sort')">Sort by Age
+                      <i v-if="sortAttribute == 'age_sort' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
+                      <i v-if="sortAttribute == 'age_sort' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
                     </button> <br>
                     <button type="button" class="btn btn-xs btn-default" v-on:click="setSortAttribute('')">
                       Clear
@@ -45,12 +45,8 @@
               </div>
             </div>
 
-
           </div><!-- / panel -->
         </div><!-- / panel-group -->
-
-      
-
 
       <ul class="row portfolio list-unstyled lightbox" id="grid">
         <li class="col-xs-6 project" v-for="pet in orderBy(filterBy(pets, breedFilter, 'breed_list'), sortAttribute, sortAscending)" v-bind:key="pet.pet_id">
