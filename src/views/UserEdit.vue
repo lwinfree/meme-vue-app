@@ -56,6 +56,9 @@
   div.form-group h5 {
     color: #c39d6d;
   }
+  /*div.project-hover-tools {
+    padding-right: 15px;
+  }*/
 </style>
 
 <script>
@@ -80,8 +83,10 @@ export default {
         name: user.name,
         email: user.email,
         zipcode: user.zipcode,
-        password: user.password,
       };
+      if (this.user.password) {
+        userParams.password = this.user.password;
+      }
       axios.patch("/api/users/me", userParams).then(response => {
         console.log("Updated!", response.data);
         this.$router.push("/users/me");

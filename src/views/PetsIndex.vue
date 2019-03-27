@@ -3,7 +3,7 @@
 
     <!-- content -->
 
-    <h1 class=text-center>Found {{ pets.length }} pets in {{ user.zipcode }}:</h1>
+    <h1 class="text-center space-top-30">Found {{ pets.length }} pets in {{ user.zipcode }}:</h1>
 
     <!-- portfolio section -->
 
@@ -19,10 +19,10 @@
               <div class="row">
                 <div class="col-sm-6 text-center">
                   <div>
-                    <p>
+                    <h5>
                       Search by Breed:
                       <input type="text" class="contact-area" v-model="breedFilter" list="petBreeds">
-                    </p>
+                    </h5>
                     <button type="button" class="btn btn-xs btn-default" v-on:click="breedFilter=''">Clear</button>
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                   </datalist>
 
                   <div class="text-center">
-                    <button type="button" class="btn btn-sm btn-primary" v-on:click="setSortAttribute('age_sort')">Sort by Age
+                    <button type="button" class="btn btn-md btn-primary" v-on:click="setSortAttribute('age_sort')">Sort by Age
                       <i v-if="sortAttribute == 'age_sort' && sortAscending == 1"><i class="fa fa-sort-up"></i></i>
                       <i v-if="sortAttribute == 'age_sort' && sortAscending == -1"><i class="fa fa-sort-down"></i></i>
                     </button> <br>
@@ -97,9 +97,23 @@
   div.project-details h4, h5 {
     color: #e0e1e2;
   }
-  div.panel-collapse p {
+  div.panel-collapse h5 {
     color: #c39d6d;
+    font-weight: 400;
   }
+  button.btn-primary {
+    font-size: 18px;
+    padding: 5px;
+  }
+  /*div.project-hover-tools {
+    padding-right: 50px;
+  }*/
+
+  /*@media max-width(1200px) {
+    div.project-hover-tools {
+      padding-right: 30px;
+    }
+  }*/
 
 </style>
 

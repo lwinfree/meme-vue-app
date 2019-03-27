@@ -951,8 +951,9 @@ a.btn {
 }
 
 .panel-group .panel-title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
+  color: #c39d6d;
 }
 
 .panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {

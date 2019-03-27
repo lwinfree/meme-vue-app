@@ -16,21 +16,21 @@
     <div  id="page-content" class = "container">
       <section id="project">
         <div class="row">
-          <div class="col-sm-4 contact-info text-center space-bottom">
+          <div class="col-sm-4 contact-info text-center">
             <h4>
               <i class="fa fa-envelope"></i> {{ user.email }}
             </h4>
           </div>
 
-          <div class="col-sm-4 contact-info text-center space-bottom">
+          <div class="col-sm-4 contact-info text-center">
             <h4 space-top-30>
               <i class="fa fa-map-marker"></i> {{ user.zipcode }}
             </h4>
           </div>
 
-          <div class="col-sm-4 contact-info text-center space-bottom">
+          <div class="col-sm-4 contact-info text-center">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-default-filled" data-toggle="modal" data-target="#exampleModal">
               Update my Zipcode
             </button>
 
@@ -71,15 +71,13 @@
             </div>
           </div>
 
-          
-          
-
-
         </div>
       </section>
 
+      <div class="separator"></div>
+
       <section id="portfolio" class="info-box two-col w-shadow">
-        <h2 class="text-center">Favorites</h2>
+        <h2 class="favorites text-center">Favorites</h2>
           <div class="pricing-table-button text-center">
             <a href="/pets" class="btn btn-lg btn-primary-filled">Search for pets to add favorites</a>
           </div>
@@ -130,6 +128,14 @@
   }
   div.banner-info a {
     font-size: large;
+  }
+  h2.favorites {
+    color: #ad8b60;
+  }
+  div.separator {
+    border-top-style: double;
+    border-color: #ad8b60;
+    padding: 15px 0 15px 0;
   }
 </style>
 

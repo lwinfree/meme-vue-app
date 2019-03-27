@@ -110,6 +110,7 @@
   }
   div.description{
     padding: 50px;
+    margin-top: 10px;
     background: rgb(198, 154, 111, 0.15);
   }
   div.section-description h1 {
@@ -119,6 +120,7 @@
     text-align: center;
     color: rgb(198, 154, 111);
     margin-top: 50px;
+    margin-bottom: 10px;
     border-style: solid;
     padding: 15px;
   }
