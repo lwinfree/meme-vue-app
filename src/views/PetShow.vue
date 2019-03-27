@@ -125,6 +125,7 @@
   }
   div.sharing h5{
     color: rgb(198, 154, 111);
+    font-weight: 600;
   }
   div.sharing i {
     font-size: x-large;

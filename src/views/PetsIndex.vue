@@ -97,6 +97,9 @@
   div.project-details h4, h5 {
     color: #e0e1e2;
   }
+  div.project-details h5 {
+    font-size: 20px;
+  }
   div.panel-collapse h5 {
     color: #c39d6d;
     font-weight: 400;
