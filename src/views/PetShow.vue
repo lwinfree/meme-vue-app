@@ -23,7 +23,7 @@
             <!-- project sidebar area -->
             <div class="col-sm-5 project-sidebar right">
               <div class="section-description light text-center">
-                <h2>{{pet.pet_name}}</h2>
+                <h1>{{pet.pet_name}}</h1>
                 
                 <!-- / project-info -->
                 
@@ -36,15 +36,15 @@
                 </div>
 
                 <div class="space-top-30" v-if="Array.isArray(pet.pet_breeds)">
-                  <h5 v-for="breed in pet.pet_breeds">
+                  <h4 v-for="breed in pet.pet_breeds">
                     {{breed.$t}}
-                  </h5>
+                  </h4>
                 </div>
                 <div class="space-top-30" v-else> 
-                  <h5>{{pet.pet_breeds.$t }}</h5>
+                  <h4>{{pet.pet_breeds.$t }}</h4>
                 </div>
                 <div class="space-top-30">
-                  <h5>{{ pet.pet_age }}</h5>
+                  <h4>{{ pet.pet_age }}</h4>
                 </div>
 
                 <div class="sharing">
@@ -58,19 +58,19 @@
                    hashtags="adopt,pet,cute"
                    inline-template>
                     <div>
-                      <button class="btn btn-sm btn-primary">
+                      <button class="btn btn-sm">
                         <network network="email">
-                          <i class="fa fa-envelope"></i> Email   
+                          <i class="fa fa-envelope"></i>    
                         </network>
                       </button>
-                      <button class="btn btn-sm btn-primary">
+                      <button class="btn btn-sm">
                         <network network="facebook">
-                          <i class="fa fa-facebook"></i> Facebook   
+                          <i class="fa fa-facebook"></i>    
                         </network>
                       </button>
-                      <button class="btn btn-sm btn-primary">
+                      <button class="btn btn-sm">
                         <network network="twitter">
-                          <i class="fa fa-twitter"></i> Twitter
+                          <i class="fa fa-twitter"></i> 
                         </network>
                       </button>
                     </div>
@@ -91,8 +91,8 @@
         </section>
         <div class="text-center space-top-30">
           <a href="https://www.petfinder.com/" target="_blank">Adopt {{pet.pet_name}} on Petfinder</a> | 
-          <a href="/pets">Back to All Pets</a> | 
-          <a href="/users/me">User Profile</a>
+          <router-link to="/pets">Back to All Pets</router-link> | 
+          <router-link to="/users/me">User Profile</router-link>
         </div>
         <!-- / project content + sidebar --> 
         
@@ -110,22 +110,31 @@
   }
   div.description{
     padding: 50px;
+    background: rgb(198, 154, 111, 0.15);
+  }
+  div.section-description h1 {
+    color: rgb(198, 154, 111);
   }
   div.sharing {
     text-align: center;
     color: rgb(198, 154, 111);
-    margin-top: 25px;
+    margin-top: 50px;
+    border-style: solid;
+    padding: 15px;
   }
   div.sharing h5{
     color: rgb(198, 154, 111);
+  }
+  div.sharing i {
+    font-size: x-large;
   }
   div.favorite i {
     color:#f442b0;
     font-size: x-large;
   }
-  /*div.row {
-    background: lightgrey;
-  }*/
+  div.space-top-30 {
+    font-size: large;
+  }
 
 </style>
 
