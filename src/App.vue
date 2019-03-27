@@ -47,9 +47,12 @@
 </template>
 
 <style>
-  footer {
-    background: rgb(198, 154, 111, 0.15);
+  /*footer {
+    background: rgb(158, 158, 158, 0.27);
   }
+  header {
+    background: rgb(158, 158, 158, 0.27);
+  }*/
 </style>
 
 <script>

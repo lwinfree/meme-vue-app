@@ -109,9 +109,9 @@
     color: #000;
   }
   div.description{
-    padding: 50px;
+    padding: 0 50px 0 50px;
     margin-top: 10px;
-    background: rgb(198, 154, 111, 0.15);
+    /*background: rgb(198, 154, 111, 0.15);*/
   }
   div.section-description h1 {
     color: rgb(198, 154, 111);
@@ -121,7 +121,6 @@
     color: rgb(198, 154, 111);
     margin-top: 50px;
     margin-bottom: 10px;
-    border-style: solid;
     padding: 15px;
   }
   div.sharing h5{
@@ -137,7 +136,10 @@
   div.space-top-30 {
     font-size: large;
   }
-
+  div.project-content-area img {
+    border: 15px solid #c69a6f;
+    border-style: ridge;
+  }
 </style>
 
 <script>

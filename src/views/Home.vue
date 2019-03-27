@@ -10,7 +10,7 @@
                   <router-link to="/pets" class="btn btn-md btn-success-filled page-scroll" ><span>Pet Search</span></router-link>
                 </div>
                 <div v-if="!isLoggedIn()">
-                  <p>Sign in to search for adoptable pets.</p>
+                  <h5>Sign in to search for adoptable pets.</h5>
                   <router-link to="/login" class="btn btn-md btn-default-filled page-scroll"><span>Login</span></router-link>
                   <router-link to="/signup" class="btn btn-md btn-default-filled page-scroll"><span>Signup</span></router-link>
                 </div>
@@ -24,6 +24,12 @@
 <style>
   h1 {
     line-height: 1.5em;
+  }
+  div.banner-info h5 {
+    color: #000;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 </style>
 

@@ -3024,7 +3024,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* Footers */
 footer {
   background: white;
-  border-top: 1px solid #ebebeb;
+  border-top: 2px solid #ebebeb;
   padding: 30px 0;
 }
 
