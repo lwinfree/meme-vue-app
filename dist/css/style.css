@@ -951,8 +951,9 @@ a.btn {
 }
 
 .panel-group .panel-title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
+  color: #c39d6d;
 }
 
 .panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
@@ -1872,7 +1873,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 .banner-info h1 {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
@@ -3023,7 +3024,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* Footers */
 footer {
   background: white;
-  border-top: 1px solid #ebebeb;
+  border-top: 2px solid #ebebeb;
   padding: 30px 0;
 }
 
